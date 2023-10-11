@@ -1,0 +1,39 @@
+{
+    "name": "select-it",
+    "version": "1.0.0",
+    "description": "A simple select component for vanilla js",
+    "main": "./dist/select-it.umd.js",
+    "module": "./dist/select-it.es.js",
+    "files": [
+        "dist"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/select-it.es.js",
+            "require": "./dist/select-it.umd.js"
+        }
+    },
+    "type": "module",
+    "scripts": {
+        "start": "vite",
+        "build": "tsc && vite build",
+        "build:docs": "vite build --config vite-docs.config.ts",
+        "serve": "vite preview  --config vite-docs.config.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^20.8.4",
+        "lightningcss": "^1.22.0",
+        "typescript": "^5.2.2",
+        "vite": "^4.4.11",
+        "vite-plugin-dts": "^3.6.0"
+    },
+    "volta": {
+        "node": "18.18.1"
+    },
+    "dependencies": {
+        "deepmerge": "^4.3.1"
+    }
+}
