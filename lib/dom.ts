@@ -47,11 +47,11 @@ export function build(
             const { dataset } = option;
 
             if (dataset.value === value) {
-                option.classList.add('select-it__item--selected');
+                option.classList.add('selectricity__item--selected');
 
                 currentValue.textContent = option.textContent ?? '';
             } else {
-                option.classList.remove('select-it__item--selected');
+                option.classList.remove('selectricity__item--selected');
             }
         });
     }
@@ -61,21 +61,21 @@ export function build(
 
 function createWrapper() {
     const wrapper = document.createElement('div');
-    wrapper.classList.add('select-it');
+    wrapper.classList.add('selectricity');
 
     return wrapper;
 }
 
 function createInput() {
     const input = document.createElement('div');
-    input.classList.add('select-it__input');
+    input.classList.add('selectricity__input');
 
     return input;
 }
 
 function createCurrentValue(data: ParseData) {
     const currentValue = document.createElement('span');
-    currentValue.classList.add('select-it__current-value');
+    currentValue.classList.add('selectricity__current-value');
 
     const selectedOption = data.options.find(
         (option) => option.value === data.selected
@@ -88,7 +88,7 @@ function createCurrentValue(data: ParseData) {
 
 function createButton(html: string | { open: string; close: string }) {
     const button = document.createElement('button');
-    button.classList.add('select-it__button');
+    button.classList.add('selectricity__button');
 
     if (typeof html === 'string') {
         button.innerHTML = html;
@@ -101,14 +101,14 @@ function createButton(html: string | { open: string; close: string }) {
 
 function createDropdown() {
     const dropdown = document.createElement('div');
-    dropdown.classList.add('select-it__dropdown');
+    dropdown.classList.add('selectricity__dropdown');
 
     return dropdown;
 }
 
 function createList() {
     const list = document.createElement('ul');
-    list.classList.add('select-it__list');
+    list.classList.add('selectricity__list');
 
     return list;
 }
@@ -129,10 +129,10 @@ function createSelectOptions(data: ParseData) {
 
 function createListItem(text: string, value: string, selected: boolean) {
     const listItem = document.createElement('li');
-    listItem.classList.add('select-it__item');
+    listItem.classList.add('selectricity__item');
 
     if (selected) {
-        listItem.classList.add('select-it__item--selected');
+        listItem.classList.add('selectricity__item--selected');
     }
 
     listItem.dataset.value = value;
@@ -143,16 +143,16 @@ function createListItem(text: string, value: string, selected: boolean) {
 }
 
 /**
- *  <div class="select-it">
-            <div class="select-it__input">
-                <span class="select-it__current-value">Option 1</span>
-                <button class="select-it__button">X</button>
+ *  <div class="selectricity">
+            <div class="selectricity__input">
+                <span class="selectricity__current-value">Option 1</span>
+                <button class="selectricity__button">X</button>
             </div>
 
-            <div class="select-it__dropdown">
-                <ul class="select-it__list">
-                    <li class="select-it__item">Option 1</li>
-                    <li class="select-it__item">Option 2</li>
+            <div class="selectricity__dropdown">
+                <ul class="selectricity__list">
+                    <li class="selectricity__item">Option 1</li>
+                    <li class="selectricity__item">Option 2</li>
                 </ul>
             </div>
         </div>

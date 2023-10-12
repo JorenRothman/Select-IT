@@ -7,8 +7,8 @@ export default defineConfig({
     build: {
         lib: {
             entry: path.resolve(__dirname, 'lib/main.ts'),
-            name: 'select-it',
-            fileName: (format) => `select-it.${format}.js`,
+            name: 'selectricity',
+            fileName: (format) => `selectricity.${format}.js`,
         },
     },
     css: {

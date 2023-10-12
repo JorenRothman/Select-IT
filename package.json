@@ -1,16 +1,16 @@
 {
-    "name": "select-it",
+    "name": "selectricity",
     "version": "1.0.0",
     "description": "A simple select component for vanilla js",
-    "main": "./dist/select-it.umd.js",
-    "module": "./dist/select-it.es.js",
+    "main": "./dist/selectricity.umd.js",
+    "module": "./dist/selectricity.es.js",
     "files": [
         "dist"
     ],
     "exports": {
         ".": {
-            "import": "./dist/select-it.es.js",
-            "require": "./dist/select-it.umd.js"
+            "import": "./dist/selectricity.es.js",
+            "require": "./dist/selectricity.umd.js"
         }
     },
     "type": "module",

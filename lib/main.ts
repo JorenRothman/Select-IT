@@ -31,7 +31,7 @@ const defaultOptions: Options = {
     },
 };
 
-export default function selectIt(
+export default function selectricity(
     element: HTMLSelectElement,
     options: Options = defaultOptions
 ) {
@@ -51,11 +51,11 @@ export default function selectIt(
     );
 
     function isDropdownOpen() {
-        return wrapper.classList.contains('select-it--open');
+        return wrapper.classList.contains('selectricity--open');
     }
 
     function openDropdown() {
-        wrapper.classList.add('select-it--open');
+        wrapper.classList.add('selectricity--open');
 
         if (typeof options.dom.button.html !== 'string') {
             button.innerHTML = options.dom.button.html.close;
@@ -63,7 +63,7 @@ export default function selectIt(
     }
 
     function closeDropdown() {
-        wrapper.classList.remove('select-it--open');
+        wrapper.classList.remove('selectricity--open');
 
         if (typeof options.dom.button.html !== 'string') {
             button.innerHTML = options.dom.button.html.open;
@@ -91,7 +91,7 @@ export default function selectIt(
         },
         reInit() {
             this.destroy();
-            selectIt(element, options);
+            selectricity(element, options);
         },
     };
 }
@@ -99,26 +99,23 @@ export default function selectIt(
 // For testing
 const element = document.getElementById('test') as HTMLSelectElement;
 
-selectIt(element, {
+selectricity(element, {
     dom: {
         hideOriginal: false,
         button: {
-            html: {
-                open: '<span>Open</span>',
-                close: '<span>Close</span>',
-            },
+            html: '<span>X</span>',
         },
     },
 });
 
 const element2 = document.getElementById('test2') as HTMLSelectElement;
 
-selectIt(element2, {
+selectricity(element2, {
     dom: {
         button: {
             html: {
-                open: '<span>X</span>',
-                close: '<span>C</span>',
+                open: '<span>Open</span>',
+                close: '<span>Close</span>',
             },
         },
     },

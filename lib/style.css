@@ -2,12 +2,12 @@
     margin: 100px;
 }
 
-.select-it {
+.selectricity {
     max-width: 320px;
     position: relative;
 }
 
-.select-it__input {
+.selectricity__input {
     display: flex;
     background-color: #f5f5f5;
     border-color: #ddd;
@@ -15,12 +15,12 @@
     color: #333;
 }
 
-.select-it__current-value {
+.selectricity__current-value {
     display: block;
     padding: 0.2rem 0.4rem;
 }
 
-.select-it__button {
+.selectricity__button {
     margin-left: auto;
     border: 0;
     background-color: transparent;
@@ -28,11 +28,11 @@
     cursor: pointer;
 }
 
-.select-it__button * {
+.selectricity__button * {
     pointer-events: none;
 }
 
-.select-it__dropdown {
+.selectricity__dropdown {
     position: absolute;
     top: 100%;
     left: 0;
@@ -41,11 +41,11 @@
     z-index: 200;
 }
 
-.select-it--open .select-it__dropdown {
+.selectricity--open .selectricity__dropdown {
     display: block;
 }
 
-.select-it__list {
+.selectricity__list {
     background-color: #f5f5f5;
     border-color: #ddd;
     color: #333;
@@ -58,12 +58,12 @@
     padding: 0;
 }
 
-.select-it__item {
+.selectricity__item {
     padding: 0.2rem 0.4rem;
     cursor: pointer;
     display: block;
 }
 
-.select-it__item--selected {
+.selectricity__item--selected {
     background-color: #ddd;
 }
